@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<title>LUMA Mission Control</title>
+<link rel='stylesheet' href='style.css'>
+</head>
+<body>
+<header class='dashboard'>
+<h1>LUMA Mission Control</h1>
+<div id='clock' class='clock'></div>
+<div class='stats glass'>
+<div>Total: <span id='stat-total'>0</span></div>
+<div>Active: <span id='stat-active'>0</span></div>
+<div>Completed: <span id='stat-done'>0</span></div>
+</div>
+</header>
+<main>
+<section class='panel glass'>
+<h2>Task Manager</h2>
+<form id='task-form'>
+<input id='task-input' type='text' placeholder='New task...' required>
+<button type='submit'>Add</button>
+</form>
+<div class='filters'>
+<button data-filter='all' class='active'>All</button>
+<button data-filter='active'>Active</button>
+<button data-filter='completed'>Completed</button>
+</div>
+<ul id='task-list'></ul>
+</section>
+<section class='panel glass'>
+<h2>AI Employee Directory</h2>
+<div id='employees' class='cards'></div>
+</section>
+<section class='panel glass'>
+<h2>Activity Log</h2>
+<ul id='activity-log'></ul>
+</section>
+</main>
+<script src='script.js'></script>
+</body>
+</html>
